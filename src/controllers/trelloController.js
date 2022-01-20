@@ -1,0 +1,1 @@
+export const trelloController = (req, res) => res.render("trello");
