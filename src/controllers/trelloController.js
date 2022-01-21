@@ -1,1 +1,1 @@
-export const trelloController = (req, res) => res.render("trello");
+export const trelloController = (req, res) => res.render("trello", { pageTitle: "Trello Clone" });

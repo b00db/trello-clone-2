@@ -1,6 +1,23 @@
-doctype html
-html(lang="ko")
-    head
-        title Trello Clone
-    body 
-        h1 Welcome To Trello Clone
+extends base.pug
+
+block content
+    #listWrap
+        .list
+            .listTitleWrap
+                .title list1 
+                from.titleEdit
+                    input(type="text", placeholder="list", autocomplete="off")
+            .cardWrap
+                .cardContent card1 
+                .cardContent card2 
+                .cardContent card3 
+            .cardAddWrap 
+                .addLabel Add Card 
+                form.addCard
+                    input(type="text", placeholder="card", autocomplete="off")
+                    button.btn Add Card
+    #listAddWrap
+        .addLabel Add List 
+        form.addList
+            input(type="text", placeholder="list", autocomplete="off")
+            button.btn Add List
