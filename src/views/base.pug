@@ -2,8 +2,10 @@ doctype html
 html(lang="ko")
     head
         title #{pageTitle}
+        link(rel="stylesheet", href="/static/css/styles.css")
     body 
         header 
             h1=pageTitle
         main
             block content
+    script(src="/static/js/main.js")
