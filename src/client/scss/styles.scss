@@ -1,4 +1,239 @@
-body {
-    background-color: red;
+$bg-color: #838C91;
+$list-color: #DFE3E6;
+$list-placeholder-color: #737B7F;
+$card-placeholder-color: #D6DCE0;
+$font-color: #2F4E60;
+$btn-color: #5AAC44;
+$thumb-color: #A9ADB0;
+$shadow: 1px 1px 1px 0px rgb(186, 186, 186);
+
+@import url(https://fonts.googleapis.com/css?family=Lato|Roboto);
+
+html, body {
+    min-width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: $list-color;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: $thumb-color;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+  
+input, button, textarea {
+    font-family: 'Lato', sans-serif;
+}
+
+input {
+    &:focus {
+      outline: none;
+    }
+}
+
+.btn {
+    padding: 5px 10px;
+    border: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    box-shadow: $shadow;
+    cursor: pointer;
+    font-size: 15px;
+    background: $btn-color;
     color: white;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.listWrap {
+    display: inline-block;
+    vertical-align: top;
+    .list {
+        background: $list-color;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        width: 250px;
+        padding: 5px 10px;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 15px;
+        margin-bottom: 35px;
+  
+        .listTitleWrap {
+            height: 40px;
+            font-size: 15px;
+            margin-bottom: 10px;
+  
+            .title {
+                height: 100%;
+                line-height: 40px;
+                color: $font-color;
+                font-weight: 600;
+                float: left;
+            }
+  
+            .titleEdit {
+                height: 100%;
+                float: left;
+                line-height: 40px;
+                background: #d0d0d0;
+                padding-left: 10px;
+                display: none;
+  
+                input {
+                    font-size: 15px;
+                    background: transparent;
+                    color: $font-color;
+                    font-weight: 600;
+                    border: none;
+        
+                    &::placeholder {
+                    color: $font-color;
+                    }
+                }
+            }
+        }
+
+        .cardWrap {
+            min-height: 10px;
+            max-height: 663px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+      
+            .cardContent {
+                padding: 7px 10px;
+                background: white;
+                width: calc(100% - 20px);
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                border-radius: 5px;
+                margin-bottom: 12px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                word-wrap: normal;
+                overflow: hidden;
+                -webkit-box-shadow: $shadow;
+                -moz-box-shadow: $shadow;
+                box-shadow: $shadow;
+            }
+        }
+
+        .cardAddWrap {
+            .addLabel {
+                padding: 7px 5px;
+                color: $bg-color;
+                margin-bottom: 12px;
+                cursor: pointer;
+            }
+      
+            .addCard {
+                display: none;
+      
+                input {
+                    border: none;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    border-radius: 5px;
+                    padding: 7px 10px;
+                    width: calc(100% - 20px);
+                    font-size: 15px;
+                    resize: none;
+                    height: 80px;
+                    margin-bottom: 7px;
+                    -webkit-box-shadow: $shadow;
+                    -moz-box-shadow: $shadow;
+                    box-shadow: $shadow;
+                }
+      
+                button {
+                    margin-bottom: 5px;
+                    float: left;
+                }
+            }
+        }
+    }
+}
+
+.listAddWrap {
+    display: inline-block;
+    vertical-align: top;
+  
+    .addLabel {
+        width: 250px;
+        background: $bg-color;
+        color: white;
+        font-size: 15px;
+        padding: 10px 10px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+  
+    .addList {
+        background: $list-color;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        width: 250px;
+        padding: 8px 10px;
+        float: left;
+        margin-right: 15px;
+        display: none;
+  
+        input {
+            padding: 7px 10px;
+            background: white;
+            width: calc(100% - 20px);
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 7px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            word-wrap: normal;
+            overflow: hidden;
+            font-size: 15px;
+            -webkit-box-shadow: $shadow;
+            -moz-box-shadow: $shadow;
+            box-shadow: $shadow;
+        }
+  
+        button {
+            float: left;
+            margin-bottom: 5px;
+        }
+    }
+}
+  
+.close {
+    float: left;
+    display: flex;
+    height: 28px;
+    width: 28px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
