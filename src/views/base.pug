@@ -3,9 +3,11 @@ html(lang="ko")
     head
         title #{pageTitle}
         link(rel="stylesheet", href="/static/css/styles.css")
+        script(src="/node_modules/jquery/dist/jquery.min.js")
+        script(src="/node_modules/jquery-ui-dist/jquery-ui.min.js")
+        script(src="/static/js/main.js")
     body 
         header 
             h1=pageTitle
         main
             block content
-    script(src="/static/js/main.js")
