@@ -258,3 +258,7 @@ input {
     margin-right: 15px;
     display: inline-block;
 }
+
+.ui-sortable-helper {
+    transform: skew(-5deg, 5deg) !important;
+}
