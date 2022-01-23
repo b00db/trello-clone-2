@@ -237,3 +237,24 @@ input {
     justify-content: center;
     cursor: pointer;
 }
+
+.card-placeholder {
+    width: 250px;
+    height: 33px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: $card-placeholder-color;
+    margin-bottom: 12px;
+}
+
+.list-placeholder {
+    width: 270px;
+    height: 200px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: $list-placeholder-color;
+    margin-right: 15px;
+    display: inline-block;
+}
